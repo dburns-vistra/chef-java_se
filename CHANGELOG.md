@@ -1,5 +1,9 @@
 # Changelog
 
+## 8.51.5
+
+- Fix #1 URI parameter ignored
+
 ## 8.51.4
 
 - Remove unused dmg dependency
