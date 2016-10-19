@@ -31,5 +31,5 @@ build_script:
   - bundle install || bundle install || bundle install
   - bundle exec rake
 
-test_script:
-  - bundle exec kitchen verify alt_home
+#test_script:
+#  - bundle exec kitchen verify windows
