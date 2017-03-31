@@ -23,39 +23,19 @@ platforms:
  # - name: ubuntu-14.04
  # - name: debian-8.0
  # - name: fedora-21
- # - name: windows-2012r2
+  - name: windows-2012r2 
+    driver_config:
+      box:  opentable/win-2012r2-standard-amd64-nocm
  #   driver:
  #     box: dhoer/windows-2012r2
     attributes:
       java_se:
         force_i586: true
 
-#suites:
-#  - name: default
-#    run_list:
-#      - recipe[java_se::default]
-#  - name: alt_home
-#    run_list:
-#      - recipe[java_se::default]
-#    excludes:
-#     - centos-7.1
-#      - ubuntu-14.04
-#      - debian-8.0
-#      - fedora-21
-#     - windows-2012r2
-#   attributes:
-#     java_se:
-#       java_home:
-#         C:\my\java\jdk
-#       win_jre_home:
-#         C:\my\java\jre
----
-
-
 suites:
   - name: default
-    run_list:
-      - recipe[java_se::default]
+   run_list:
+     - recipe[java_se::default]
   - name: alt_home
     run_list:
       - recipe[java_se::default]
@@ -72,4 +52,3 @@ suites:
           C:\my\java\jdk
         win_jre_home:
           C:\my\java\jre
-
