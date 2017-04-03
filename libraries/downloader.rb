@@ -96,9 +96,9 @@ module JavaSE
   # Monkey patched open library to allow oracle downloads
   module Downloader
     class <<self
-      # rubocop:disable Metrics/MethodLength
+      # disable Metrics/MethodLength
       def fetch(url, file, checksum, limit = 5)
-        raise ArgumentError, "too many download failures from #{url}" if limit.zero?
+        raise ArgumentError, "too many download failures from #{url}" if limit == 0
         begin
           open(URI(url),
                'Cookie' => 'oraclelicense=accept-securebackup-cookie',
@@ -117,7 +117,7 @@ module JavaSE
           fetch(url, file, checksum, limit - 1)
         end
       end
-      # rubocop:enable Metrics/MethodLength
+      # enable Metrics/MethodLength
 
       def valid?(file, checksum)
         sha256 = Digest::SHA256.file file
