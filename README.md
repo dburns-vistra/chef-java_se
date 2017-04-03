@@ -148,3 +148,5 @@ Please refer to [CONTRIBUTING](https://github.com/dhoer/chef-java_se/blob/master
 
 MIT - see the accompanying [LICENSE](https://github.com/dhoer/chef-java_se/blob/master/LICENSE.md) file
 for details.
+
+## Daniel Burns - dburns-vistra - I want to use this Java JDK Cookbook and pin to this version, but when running cookstyle I saw a number errors and I am contributing by changing the code in a couple of files to eliminate the Cookstyle errors and I also changed the file directory structure to be more in-line with Chef DK 12.
